@@ -10,11 +10,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 const response = await openai.createChatCompletion({
   model: "gpt-3.5-turbo",
-  temperature: 0,
+  temperature: 0.8,
   messages: [
         {"role": "system", "content": "You are a smart contract auditor, explain the solidity code to user"},
         {"role": "user", "content": contract},
-        {"role": "user", "content": "Can the owner mint exceed max supply?"}
+        {"role": "user", "content": "提现时开发者能分到多少？"}
   ]
 });
 console.log(response.data.choices[0].message.content);

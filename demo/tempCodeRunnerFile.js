@@ -1,1 +1,0 @@
-getContractSourceCode().then(console.log);
